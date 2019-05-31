@@ -11,11 +11,11 @@ void Bird::Out(ofstream &ofst)
 	ofst << "Это птица: Отношение к перелету: ";
 	if (flying == false)
 	{
-		ofst << "Неперелетная";
+		ofst << "Неперелетная ";
 	}
 	else
 	{
-		ofst << "Перелетная";
+		ofst << "Перелетная ";
 	}
 	OutCommon(ofst);
 }

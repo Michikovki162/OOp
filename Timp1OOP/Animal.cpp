@@ -9,6 +9,7 @@ Animal* Animal::In(ifstream &ifst)
 {
 	Animal *s;
 	int key;
+	int length;
 	ifst >> key;
 	if (key == 1) 
 	{
@@ -22,9 +23,12 @@ Animal* Animal::In(ifstream &ifst)
 		return 0;
 	s->InData(ifst);
 	ifst >> s->name;
+	length = s->name.length();
+	s->length = length;
 	return s;
 }
 void Animal::OutCommon(ofstream & ofst)
 {
 	ofst << "Название: " << name << endl;
+	ofst << "Длина названия: " << length << " символа(ов) " << endl;
 }
