@@ -1,6 +1,7 @@
 #include "Animal.h"
 #include "Fish.h"
 #include "Bird.h"
+#include "Beast.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -17,6 +18,10 @@ Animal* Animal::In(ifstream &ifst)
 	else if (key == 2)
 	{
 		s = new Bird;
+	}
+	else if (key == 3)
+	{
+		s = new Beast;
 	}
 	else
 		return 0;
