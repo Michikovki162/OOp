@@ -22,9 +22,11 @@ Animal* Animal::In(ifstream &ifst)
 		return 0;
 	s->InData(ifst);
 	ifst >> s->name;
+	ifst >> s->age;
 	return s;
 }
 void Animal::OutCommon(ofstream & ofst)
 {
 	ofst << "Название: " << name << endl;
+	ofst << "Возраст: " << age << endl;
 }

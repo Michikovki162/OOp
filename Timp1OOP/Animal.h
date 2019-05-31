@@ -6,6 +6,7 @@ class Animal
 {
 private:
 	string name;
+	int age;
 public:
 	static Animal* In(ifstream &ifst);
 	virtual void InData(ifstream &ifst) = 0; // ввод
