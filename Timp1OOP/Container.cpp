@@ -70,9 +70,67 @@ void container::Out(ofstream & ofst)
 	Node* current = Top;
 	ofst << " Container contains " << count
 		<< " elements." << endl;
+	if (count != 0)
+	{
+		Sort();
+	}
 	for (int j = 0; j < count; j++) {
 		ofst << j << ": ";
 		current->data->Out(ofst);
 		current = current->Next;
 	}
+}
+void container::Sort()
+{
+	Node* current;
+	current = Top;
+	Node* currentnext = current->Next;
+	for (int i = 1; i < count; i++)
+	{
+		for (int j = 1; j < count; j++)
+		{
+			if (current->data->Compare(*current->Next->data))
+			{
+				current->Processsort(Top);
+				current = current->Next;
+			}
+			else
+				current = current->Next;
+		}
+		current = Top;
+	}
+}
+void container::Node::Processsort(Node *& Top)
+{
+	Node* currentnext = this->Next;
+	if (this == Top)
+	{
+		if (this->Next->Next == this)
+		{
+			Top = this->Next;
+		}
+		else
+		{
+			this->castl();
+		}
+	}
+	else
+	{
+		if (this->Next->Next == this)
+		{
+			Top = this->Next;
+		}
+		else
+		{
+			this->castl();
+		}
+	}
+}
+void container::Node::castl()
+{
+	Node* currentnext = this->Next;
+	Animal* q1 = this->data;
+	Animal* q2 = currentnext->data;
+	this->data = q2;
+	currentnext->data = q1;
 }

@@ -13,6 +13,8 @@ private:
 		Node* Next;
 		Node* Prev;
 		Animal* data;
+		void Processsort(Node* &Top);
+		void castl();
 	};
 	Node* Top;
 	int count;
@@ -21,6 +23,7 @@ public:
 	void Out(ofstream &ofst); // вывод
 	void Clear(); // очистка контейнера от фигур
 	container(); // инициализация контейнера
+	void Sort();
 	~container() { Clear(); }
 };
 
