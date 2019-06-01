@@ -1,4 +1,3 @@
-﻿  Animal.cpp
-c:\users\user\documents\github\oopp\timp1oop\animal.cpp(25): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+﻿  Container.cpp
   Timp1OOP.vcxproj -> C:\Users\User\Documents\GitHub\OOpp\x64\Debug\Timp1OOP.exe
   Timp1OOP.vcxproj -> C:\Users\User\Documents\GitHub\OOpp\x64\Debug\Timp1OOP.pdb (Full PDB)

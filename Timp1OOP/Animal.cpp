@@ -32,5 +32,5 @@ void Animal::OutCommon(ofstream & ofst)
 }
 bool Animal::Compare(Animal & other)
 {
-	return length > other.length;
+	return length < other.length;
 }

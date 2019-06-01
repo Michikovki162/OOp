@@ -67,13 +67,13 @@ void container::In(ifstream & ifst)
 
 void container::Out(ofstream & ofst)
 {
-	Node* current = Top;
-	ofst << " Container contains " << count
-		<< " elements." << endl;
 	if (count != 0)
 	{
 		Sort();
 	}
+	Node* current = Top;
+	ofst << " Container contains " << count
+		<< " elements." << endl;
 	for (int j = 0; j < count; j++) {
 		ofst << j << ": ";
 		current->data->Out(ofst);
