@@ -76,3 +76,14 @@ void container::Out(ofstream & ofst)
 		current = current->Next;
 	}
 }
+void container::Out_only_Fish(ofstream & ofst)
+{
+	ofst << "Только рыба" << endl;
+	Node* current = Top;
+	for (int i = 0; i < count; i++) 
+	{
+		ofst << i << ": ";
+		current->data->Out_only_Fish(ofst);
+		current = current->Next;
+	}
+}

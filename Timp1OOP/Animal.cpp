@@ -28,3 +28,7 @@ void Animal::OutCommon(ofstream & ofst)
 {
 	ofst << "Название: " << name << endl;
 }
+void Animal::Out_only_Fish(ofstream & ofst)
+{
+	ofst << endl;
+}
