@@ -77,6 +77,7 @@ void container::Out(ofstream & ofst)
 	for (int j = 0; j < count; j++) {
 		ofst << j << ": ";
 		current->data->Out(ofst);
+		ofst << "Длина названия: " << current->data->namelength() << endl;
 		current = current->Next;
 	}
 }
@@ -133,4 +134,9 @@ void container::Node::castl()
 	Animal* q2 = currentnext->data;
 	this->data = q2;
 	currentnext->data = q1;
+}
+int Animal::namelength()
+{
+	int length = name.length();
+	return length;
 }
