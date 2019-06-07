@@ -1,0 +1,6 @@
+Filled container. 
+ Container contains 2 elements.
+0: Это Зверь: Тип питания: Травоядное Название: Слон
+1: Это рыба: Место обитания: Река Название: Карп
+Empty container. 
+ Container contains 0 elements.
