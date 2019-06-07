@@ -1,0 +1,5 @@
+Filled container. 
+ Container contains 1 elements.
+0: Это рыба: Место обитания: Река Название: Карп
+Empty container. 
+ Container contains 0 elements.
