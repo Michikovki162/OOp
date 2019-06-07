@@ -6,9 +6,9 @@ class Animal
 {
 private:
 	string name;
-	int length;
 public:
 	static Animal* In(ifstream &ifst);
+	int namelength();
 	virtual void InData(ifstream &ifst) = 0; // ввод
 	virtual void Out(ofstream &ofst) = 0; // вывод
 	void OutCommon(ofstream &ofst);

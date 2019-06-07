@@ -73,6 +73,12 @@ void container::Out(ofstream & ofst)
 	for (int j = 0; j < count; j++) {
 		ofst << j << ": ";
 		current->data->Out(ofst);
+		ofst << "Длина названия: " << current->data->namelength() << endl;
 		current = current->Next;
 	}
+}
+int Animal::namelength()
+{
+	int length = name.length();
+	return length;
 }
