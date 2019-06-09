@@ -9,6 +9,7 @@ Animal* Animal::In(ifstream &ifst)
 {
 	Animal *s;
 	int key;
+	int length;
 	ifst >> key;
 	if (key == 1) 
 	{
