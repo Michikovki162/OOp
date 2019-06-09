@@ -1,4 +1,4 @@
-﻿ Animal.cpp
+﻿Animal.cpp
   LINK : не найден или не выполнена сборка C:\Users\User\Documents\GitHub\OOpp\x64\Debug\Timp1OOP.exe при последней инкрементной компоновке; выполняется полная компоновка
 ﻿  Container.cpp
 c:\users\user\documents\github\oopp\timp1oop\container.cpp(82): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных

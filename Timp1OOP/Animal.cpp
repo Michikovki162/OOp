@@ -40,3 +40,7 @@ bool Animal::Compare(Animal & other)
 {
 	return namelength() < other.namelength();
 }
+void Animal::Out_only_Fish(ofstream & ofst)
+{
+	ofst << endl;
+}

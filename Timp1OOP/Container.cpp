@@ -140,3 +140,14 @@ int Animal::namelength()
 	int length = name.length();
 	return length;
 }
+void container::Out_only_Fish(ofstream & ofst)
+{
+	ofst << "Только рыба" << endl;
+	Node* current = Top;
+	for (int i = 0; i < count; i++) 
+	{
+		ofst << i << ": ";
+		current->data->Out_only_Fish(ofst);
+		current = current->Next;
+	}
+}

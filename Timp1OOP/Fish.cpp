@@ -48,3 +48,7 @@ void Fish::Out(ofstream &ofst)
 
 	OutCommon(ofst);
 }
+void Fish::Out_only_Fish(ofstream &ofst)
+{
+	Out(ofst);
+}
