@@ -15,6 +15,9 @@ public:
 	virtual void Out_only_Fish(ofstream &ofst);
 	void OutCommon(ofstream &ofst);
 	bool Compare(Animal &other);
-	int mist;
+	virtual void MultiMethod(Animal *other, ofstream &ofst) = 0;
+	virtual void MMfish(ofstream &ofst) = 0;
+	virtual void MMbird(ofstream &ofst) = 0;
+	virtual void MMbeast(ofstream &ofst) = 0;
 };
 #endif

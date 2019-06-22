@@ -70,3 +70,19 @@ void Fish::Out_only_Fish(ofstream &ofst)
 	}
 	Out(ofst);
 }
+void Fish::MultiMethod(Animal * other, ofstream & ofst)
+{
+	other->MMfish(ofst);
+}
+void Fish::MMbird(ofstream & ofst)
+{
+	ofst << "–ыба и птица" << endl;
+}
+void Fish::MMfish(ofstream & ofst)
+{
+	ofst << "–ыба и рыба" << endl;
+}
+void Fish::MMbeast(ofstream & ofst)
+{
+	ofst << "–ыба и зверь" << endl;
+}

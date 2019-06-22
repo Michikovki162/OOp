@@ -17,6 +17,10 @@ public:
 	void InData(ifstream &ifst); // ввод
 	void Out(ofstream &ofst); // вывод
 	void Out_only_Fish(ofstream &ofst);
+	void MultiMethod(Animal *other, ofstream &ofst);
+	void MMfish(ofstream &ofst);
+	void MMbird(ofstream &ofst);
+	void MMbeast(ofstream &ofst);
 	Fish() { ; } // создание без инициализации.
 };
 #endif

@@ -1,3 +1,4 @@
-﻿  main.cpp
+﻿  Container.cpp
+c:\users\user\documents\github\oopp\timp1oop\container.cpp(140): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   Timp1OOP.vcxproj -> C:\Users\User\Documents\GitHub\OOpp\x64\Debug\Timp1OOP.exe
   Timp1OOP.vcxproj -> C:\Users\User\Documents\GitHub\OOpp\x64\Debug\Timp1OOP.pdb (Full PDB)

@@ -25,6 +25,7 @@ public:
 	void Out_only_Fish(ofstream &ofst);
 	container(); // инициализация контейнера
 	void Sort();
+	void MultiMethod(ofstream &ofst);
 	~container() { Clear(); }
 };
 

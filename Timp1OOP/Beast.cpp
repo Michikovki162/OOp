@@ -54,3 +54,19 @@ void Beast::Out(ofstream &ofst)
 
 	OutCommon(ofst);
 }
+void Beast::MultiMethod(Animal * other, ofstream & ofst)
+{
+	other->MMbeast(ofst);
+}
+void Beast::MMbird(ofstream & ofst)
+{
+	ofst << "«верь и птица" << endl;
+}
+void Beast::MMfish(ofstream & ofst)
+{
+	ofst << "«верь и рыба" << endl;
+}
+void Beast::MMbeast(ofstream & ofst)
+{
+	ofst << "«верь и зверь" << endl;
+}
