@@ -8,7 +8,7 @@ void Beast::InData(ifstream &ifst)
 	ifst >> food;
 	if (food < 1 || food > 3)
 	{
-		cout << "Произошла ошибка при вводе типа питания животного";
+		cout << "Произошла ошибка при вводе типа питания животного\n";
 		system("pause");
 		exit(1);
 	}
@@ -32,7 +32,7 @@ void Beast::Out(ofstream &ofst)
 {
 	if (type != Beast::food::herbal && type != Beast::food::insects && type != Beast::food::meat)
 	{
-		cout << "Произошла ошибка при выводе типа питания животного";
+		cout << "Произошла ошибка при выводе типа питания животного\n";
 		system("pause");
 		exit(1);
 	}

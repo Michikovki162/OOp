@@ -4,19 +4,19 @@
 using namespace std;
 void Bird::InData(ifstream &ifst) 
 {
+	ifst >> flying;
 	if (flying != false && flying != true)
 	{
-		cout << "Произошла ошибка при вводе перелетности птицы";
+		cout << "Произошла ошибка при вводе перелетности птицы\n";
 		system("pause");
-		exit(1);
+		//exit(1);
 	}
-	ifst >> flying;
 }
 void Bird::Out(ofstream &ofst) 
 {
 	if (flying != false && flying != true)
 	{
-		cout << "Произошла ошибка при выводе перелетности птицы";
+		cout << "Произошла ошибка при выводе перелетности птицы\n";
 		system("pause");
 		exit(1);
 	}

@@ -8,7 +8,7 @@ void Fish::InData(ifstream &ifst)
 	ifst >> mesto;
 	if (mesto < 1 || mesto > 4)
 	{
-		cout << "Произошла ошибка при вводе места проживания рыбы";
+		cout << "Произошла ошибка при вводе места проживания рыбы\n";
 		system("pause");
 		exit(1);
 	}
@@ -35,7 +35,7 @@ void Fish::Out(ofstream &ofst)
 {
 	if (type != Fish::place::river && type != Fish::place::lake && type != Fish::place::sea && Fish::place::ocean)
 	{
-		cout << "Произошла ошибка при выводе места проживания рыбы";
+		cout << "Произошла ошибка при выводе места проживания рыбы\n";
 		system("pause");
 		exit(1);
 	}
@@ -64,7 +64,7 @@ void Fish::Out_only_Fish(ofstream &ofst)
 {
 	if (type != Fish::place::river && type != Fish::place::lake && type != Fish::place::sea && Fish::place::ocean)
 	{
-		cout << "Произошла ошибка при выводе места проживания рыбы";
+		cout << "Произошла ошибка при выводе места проживания рыбы\n";
 		system("pause");
 		exit(1);
 	}

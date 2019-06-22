@@ -32,14 +32,14 @@ Animal* Animal::In(ifstream &ifst)
 	ifst >> s->name;
 	if (s->name.length() == 0)
 	{
-		cout << "Произошла ошибка при вводе названия";
+		cout << "Произошла ошибка при вводе названия\n";
 		system("pause");
 		exit(1);
 	}
 	ifst >> s->age;
 	if (s->age < 0)
 	{
-		cout << "Произошла ошибка при вводе возраста";
+		cout << "Произошла ошибка при вводе возраста\n";
 		system("pause");
 		exit(1);
 	}
@@ -49,13 +49,13 @@ void Animal::OutCommon(ofstream & ofst)
 {
 	if (name.length() == 0)
 	{
-		cout << "Произошла ошибка при выводе названия";
+		cout << "Произошла ошибка при выводе названия\n";
 		system("pause");
 		exit(1);
 	}
 	if (age < 0)
 	{
-		cout << "Произошла ошибка при вводе возраста";
+		cout << "Произошла ошибка при вводе возраста\n";
 		system("pause");
 		exit(1);
 	}
@@ -66,7 +66,7 @@ bool Animal::Compare(Animal & other)
 {
 	if ((namelength() < other.namelength()) != true && (namelength() < other.namelength() != false))
 	{
-		cout << "Произошла ошибка при сравнении длины названий";
+		cout << "Произошла ошибка при сравнении длины названий\n";
 		system("pause");
 		exit(1);
 	}

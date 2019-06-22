@@ -7,6 +7,8 @@
 using namespace std;
 int main(int argc, char* argv[])
 {
+
+	setlocale(LC_ALL, "Russian");
 	int a;
 	if (argc != 3) 
 	{
@@ -19,24 +21,23 @@ int main(int argc, char* argv[])
 	ifstream ifst(argv[1]);
 	if (!ifst)
 	{
-		cout << "Файл ввода не открыт!";
+		cout << "Файл ввода не открыт!\n";
 		system("pause");
 		exit(1);
 	}
 	ofstream ofst(argv[2]);
 	if (!ofst)
 	{
-		cout << "Файл вывода не открыт!";
+		cout << "Файл вывода не открыт!\n";
 		system("pause");
 		exit(1);
 	}
 	cout << "Start" << endl;
-	setlocale(LC_ALL, "Russian");
 	container c;
 	c.In(ifst);
 	ofst << "Filled container. " << endl;
 
-	c.Out_only_Fish(ofst);
+	c.Out(ofst);
 	c.Clear();
 	ofst << "Empty container. " << endl;
 	c.Out(ofst);
