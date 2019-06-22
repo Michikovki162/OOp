@@ -48,3 +48,15 @@ void Fish::Out(ofstream &ofst)
 
 	OutCommon(ofst);
 }
+void Fish::MultiMethod(Animal*other, ofstream & ofst)
+{
+	other->MMfish(ofst);
+}
+void Fish::MMbird(ofstream & ofst)
+{
+	ofst << "ѕтица и рыба" << endl;
+}
+void Fish::MMfish(ofstream & ofst)
+{
+	ofst << "–ыба и рыба" << endl;
+}

@@ -76,3 +76,20 @@ void container::Out(ofstream & ofst)
 		current = current->Next;
 	}
 }
+void container::MultiMethod(ofstream & ofst)
+{
+	ofst << "\nМультиметод." << endl;
+	Node* current_i = Top;
+	for (int i = 0; i < count - 1; i++) 
+	{
+		Node* current_j = current_i->Next;
+		for (int j = i + 1; j < count; j++)
+		{
+			current_i->data->MultiMethod(current_j->data, ofst);
+			current_i->data->Out(ofst);
+			current_j->data->Out(ofst);
+			current_j = current_j->Next;
+		}
+		current_i = current_i->Next;
+	}
+}
