@@ -80,10 +80,11 @@ void container::MultiMethod(ofstream & ofst)
 {
 	ofst << "\nМультиметод." << endl;
 	Node* current_i = Top;
-	for (int i = 0; i < count - 1; i++) 
+	Node* current_j = current_i;
+	for (int i = 0; i < count ; i++) 
 	{
-		Node* current_j = current_i->Next;
-		for (int j = i + 1; j < count; j++)
+		//Node* current_j = current_i->Next;
+		for (int j = 0; j < count; j++)
 		{
 			current_i->data->MultiMethod(current_j->data, ofst);
 			current_i->data->Out(ofst);
