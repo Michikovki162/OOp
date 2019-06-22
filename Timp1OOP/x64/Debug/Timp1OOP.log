@@ -1,3 +1,6 @@
-﻿  main.cpp
+﻿  Bird.cpp
+  Animal.cpp
+c:\users\user\documents\github\oopp\timp1oop\animal.cpp(13): warning C4101: length: неиспользованная локальная переменная
+  Создание кода...
   Timp1OOP.vcxproj -> C:\Users\User\Documents\GitHub\OOpp\x64\Debug\Timp1OOP.exe
   Timp1OOP.vcxproj -> C:\Users\User\Documents\GitHub\OOpp\x64\Debug\Timp1OOP.pdb (Full PDB)

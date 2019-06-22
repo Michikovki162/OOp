@@ -6,17 +6,17 @@ using namespace std;
 class container
 {
 private:
-	class Node 
+	class node 
 	{
 	public:
-		Node();
-		Node* Next;
-		Node* Prev;
-		Animal* data;
-		void Processsort(Node* &Top);
-		void castl();
+		node();
+		node* next;
+		node* prev;
+		animal* data;
+		void Process_sort(node* &Top);
+		void Castl();
 	};
-	Node* Top;
+	node* top;
 	int count;
 public:
 	void In(ifstream &ifst); // ввод

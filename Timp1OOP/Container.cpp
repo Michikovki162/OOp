@@ -2,25 +2,25 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-container::Node::Node()
+container::node::node()
 {
-	this->Next = nullptr;
-	this->Prev = nullptr;
+	this->next = nullptr;
+	this->prev = nullptr;
 	this->data = nullptr;
 }
 
 container::container()
 {
-	Top = nullptr;
+	top = nullptr;
 	count = 0;
 }
 void container::Clear()
 {
-	Node* current = Top;
+	node* current = top;
 	for (int i = 1; i < count; i++)
 	{
-		current = current->Next;
-		delete current->Prev;
+		current = current->next;
+		delete current->prev;
 	}
 	delete current;
 	count = 0;
@@ -28,31 +28,35 @@ void container::Clear()
 void container::In(ifstream & ifst)
 {
 	int flag;
-	while (!ifst.eof()) {
+	while (!ifst.eof())
+	{
 		if (count == 0)
 		{
-			Top = new Node;
-			Top->Next = Top;
-			Top->Prev = Top;
-			if ((Top->data = Animal::In(ifst)) != 0)
+			top = new node;
+			top->next = top;
+			top->prev = top;
+			if ((top->data = animal::In(ifst)) != 0)
+			{
 				flag = 1;
+			}
 			else
+			{
 				flag = 0;
-
+			}
 		}
 		else
 		{
-			Node *current = Top;
+			node *current = top;
 			for (int j = 1; j < count; j++)
 			{
-				current = current->Next;
+				current = current->next;
 			}
-			current->Next = new Node;
-			if ((current->Next->data = Animal::In(ifst)) != 0)
+			current->next = new node;
+			if ((current->next->data = animal::In(ifst)) != 0)
 			{
-				Top->Prev = current->Next;
-				current->Next->Prev = current;
-				current->Next->Next = Top;
+				top->prev = current->next;
+				current->next->prev = current;
+				current->next->next = top;
 				flag = 1;
 			}
 			else
@@ -61,7 +65,9 @@ void container::In(ifstream & ifst)
 			}
 		}
 		if (flag != 0)
+		{
 			count++;
+		}
 	}
 }
 
@@ -71,71 +77,74 @@ void container::Out(ofstream & ofst)
 	{
 		Sort();
 	}
-	Node* current = Top;
+	node* current = top;
 	ofst << " Container contains " << count
 		<< " elements." << endl;
-	for (int j = 0; j < count; j++) {
+	for (int j = 0; j < count; j++) 
+	{
 		ofst << j << ": ";
 		current->data->Out(ofst);
-		ofst << "Длина названия: " << current->data->namelength() << endl;
-		current = current->Next;
+		ofst << "Длина названия: " << current->data->Name_length() << endl;
+		current = current->next;
 	}
 }
 void container::Sort()
 {
-	Node* current;
-	current = Top;
-	Node* currentnext = current->Next;
+	node* current;
+	current = top;
+	node* currentnext = current->next;
 	for (int i = 1; i < count; i++)
 	{
 		for (int j = 1; j < count; j++)
 		{
-			if (current->data->Compare(*current->Next->data))
+			if (current->data->Compare(*current->next->data))
 			{
-				current->Processsort(Top);
-				current = current->Next;
+				current->Process_sort(top);
+				current = current->next;
 			}
 			else
-				current = current->Next;
+			{
+				current = current->next;
+			}
 		}
-		current = Top;
+		current = top;
 	}
 }
-void container::Node::Processsort(Node *& Top)
+void container::node::Process_sort(node *& top)
 {
-	Node* currentnext = this->Next;
-	if (this == Top)
+	node* currentnext = this->next;
+	if (this == top)
 	{
-		if (this->Next->Next == this)
+		if (this->next->next == this)
 		{
-			Top = this->Next;
+			top = this->next;
 		}
 		else
 		{
-			this->castl();
+			this->Castl();
 		}
 	}
 	else
 	{
-		if (this->Next->Next == this)
+		if (this->next->next == this)
 		{
-			Top = this->Next;
+			top = this->next;
 		}
 		else
 		{
-			this->castl();
+			this->Castl();
 		}
 	}
 }
-void container::Node::castl()
+void container::node::Castl()
 {
-	Node* currentnext = this->Next;
-	Animal* q1 = this->data;
-	Animal* q2 = currentnext->data;
+	node* currentnext = this->next;
+	animal* q1 = this->data;
+	animal* q2 = currentnext->data;
 	this->data = q2;
 	currentnext->data = q1;
 }
-int Animal::namelength()
+int animal::Name_length()
 {
 	int length = name.length();
 	return length;
@@ -143,11 +152,11 @@ int Animal::namelength()
 void container::Out_only_Fish(ofstream & ofst)
 {
 	ofst << "Только рыба" << endl;
-	Node* current = Top;
+	node* current = top;
 	for (int i = 0; i < count; i++) 
 	{
 		ofst << i << ": ";
 		current->data->Out_only_Fish(ofst);
-		current = current->Next;
+		current = current->next;
 	}
 }

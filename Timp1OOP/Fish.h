@@ -3,7 +3,7 @@
 #include <fstream>
 #include "Animal.h"
 using namespace std;
-class Fish : public Animal 
+class fish : public animal 
 {
 	enum place	
 	{
@@ -14,9 +14,9 @@ class Fish : public Animal
 	}type;
 	
 public:
-	void InData(ifstream &ifst); // ввод
+	void In_data(ifstream &ifst); // ввод
 	void Out(ofstream &ofst); // вывод
 	void Out_only_Fish(ofstream &ofst);
-	Fish() { ; } // создание без инициализации.
+	fish() { ; } // создание без инициализации.
 };
 #endif

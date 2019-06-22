@@ -2,7 +2,7 @@
 #define Beast_H
 #include <fstream>
 #include "Container.h"
-class Beast : public Animal
+class beast : public animal
 {
 	enum food
 	{
@@ -12,8 +12,8 @@ class Beast : public Animal
 	}type;
 
 public:
-	void InData(ifstream &ifst); // ввод
+	void In_data(ifstream &ifst); // ввод
 	void Out(ofstream &ofst); // вывод
-	Beast() {} // создание без инициализации.
+	beast() {} // создание без инициализации.
 };
 #endif

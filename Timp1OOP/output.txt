@@ -1,0 +1,10 @@
+Filled container. 
+ Container contains 2 elements.
+0: Это птица: Отношение к перелету: Неперелетная Название: Синичка
+Возраст: 50
+Длина названия: 7
+1: Это рыба: Место обитания: Река Название: Карп
+Возраст: 40
+Длина названия: 4
+Empty container. 
+ Container contains 0 elements.

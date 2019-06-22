@@ -3,13 +3,13 @@
 #include <fstream>
 #include "Animal.h"
 using namespace std;
-class Bird : public Animal 
+class bird : public animal 
 {
 	bool flying;
 
 public:
-	void InData(ifstream &ifst); // ввод
+	void In_data(ifstream &ifst); // ввод
 	void Out(ofstream &ofst); // вывод
-	Bird() { ; } // создание без инициализации.
+	bird() { ; } // создание без инициализации.
 };
 #endif

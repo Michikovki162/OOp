@@ -1,4 +1,4 @@
-#include "Animal.h"
+#include "animal.h"
 #include "Fish.h"
 #include "Bird.h"
 #include "Beast.h"
@@ -6,29 +6,29 @@
 #include <fstream>
 #include <string>
 using namespace std;
-Animal* Animal::In(ifstream &ifst)
+animal* animal::In(ifstream &ifst)
 {
-	Animal *s;
+	animal *s;
 	int key;
 	int length;
 	ifst >> key;
 	if (key == 1)
 	{
-		s = new Fish;
+		s = new fish;
 	}
 	else if (key == 2)
 	{
-		s = new Bird;
+		s = new bird;
 	}
 	else if (key == 3)
 	{
-		s = new Beast;
+		s = new beast;
 	}
 	else
 	{
 		return 0;
 	}
-	s->InData(ifst);
+	s->In_data(ifst);
 	ifst >> s->name;
 	if (s->name.length() == 0)
 	{
@@ -45,7 +45,7 @@ Animal* Animal::In(ifstream &ifst)
 	}
 	return s;
 }
-void Animal::OutCommon(ofstream & ofst)
+void animal::Out_common(ofstream & ofst)
 {
 	if (name.length() == 0)
 	{
@@ -62,17 +62,17 @@ void Animal::OutCommon(ofstream & ofst)
 	ofst << "Название: " << name << endl;
 	ofst << "Возраст: " << age << endl;
 }
-bool Animal::Compare(Animal & other)
+bool animal::Compare(animal & other)
 {
-	if ((namelength() < other.namelength()) != true && (namelength() < other.namelength() != false))
+	if ((Name_length() < other.Name_length()) != true && (Name_length() < other.Name_length() != false))
 	{
 		cout << "Произошла ошибка при сравнении длины названий\n";
 		system("pause");
 		exit(1);
 	}
-	return namelength() < other.namelength();
+	return Name_length() < other.Name_length();
 }
-void Animal::Out_only_Fish(ofstream & ofst)
+void animal::Out_only_Fish(ofstream & ofst)
 {
 	ofst << endl;
 }

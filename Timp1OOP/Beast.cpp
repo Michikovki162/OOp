@@ -1,8 +1,8 @@
-#include "Beast.h"
+#include "beast.h"
 #include <iostream>
 #include <fstream>
 using namespace std;
-void Beast::InData(ifstream &ifst)
+void beast::In_data(ifstream &ifst)
 {
 	int food;
 	ifst >> food;
@@ -15,22 +15,22 @@ void Beast::InData(ifstream &ifst)
 	switch (food)
 	{
 	case 1:
-		type = Beast::food::herbal;
+		type = beast::food::herbal;
 		break;
 	case 2:
-		type = Beast::food::insects;
+		type = beast::food::insects;
 		break;
 	case 3:
-		type = Beast::food::meat;
+		type = beast::food::meat;
 		break;
 	default:
 		break;
 	}
 }
 
-void Beast::Out(ofstream &ofst)
+void beast::Out(ofstream &ofst)
 {
-	if (type != Beast::food::herbal && type != Beast::food::insects && type != Beast::food::meat)
+	if (type != beast::food::herbal && type != beast::food::insects && type != beast::food::meat)
 	{
 		cout << "Произошла ошибка при выводе типа питания животного\n";
 		system("pause");
@@ -39,18 +39,17 @@ void Beast::Out(ofstream &ofst)
 	ofst << "Это Зверь: Тип питания: ";
 	switch (type)
 	{
-	case Beast::food::herbal:
+	case beast::food::herbal:
 		ofst << "Травоядное ";
 		break;
-	case Beast::food::insects:
+	case beast::food::insects:
 		ofst << "Насекомоядное ";
 		break;
-	case Beast::food::meat:
+	case beast::food::meat:
 		ofst << "Хищник ";
 		break;
 	default:
 		break;
 	}
-
-	OutCommon(ofst);
+	Out_common(ofst);
 }

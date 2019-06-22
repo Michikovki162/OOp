@@ -1,8 +1,8 @@
-#include "Fish.h"
+#include "fish.h"
 #include <iostream>
 #include <fstream>
 using namespace std;
-void Fish::InData(ifstream &ifst) 
+void fish::In_data(ifstream &ifst)
 {
 	int mesto;
 	ifst >> mesto;
@@ -15,25 +15,25 @@ void Fish::InData(ifstream &ifst)
 	switch (mesto)
 	{
 	case 1:
-		type = Fish::place::river;
+		type = fish::place::river;
 		break;
 	case 2:
-		type = Fish::place::lake;
+		type = fish::place::lake;
 		break;
 	case 3:
-		type = Fish::place::sea;
+		type = fish::place::sea;
 		break;
 	case 4:
-		type = Fish::place::ocean;
+		type = fish::place::ocean;
 		break;
 	default:
 		break;
 	}
 }
 
-void Fish::Out(ofstream &ofst) 
+void fish::Out(ofstream &ofst) 
 {
-	if (type != Fish::place::river && type != Fish::place::lake && type != Fish::place::sea && Fish::place::ocean)
+	if (type != fish::place::river && type != fish::place::lake && type != fish::place::sea && fish::place::ocean)
 	{
 		cout << "Произошла ошибка при выводе места проживания рыбы\n";
 		system("pause");
@@ -42,27 +42,26 @@ void Fish::Out(ofstream &ofst)
 	ofst << "Это рыба: Место обитания: ";
 	switch (type)
 	{
-	case Fish::place::river:
+	case fish::place::river:
 		ofst << "Река ";
 		break;
-	case Fish::place::lake:
+	case fish::place::lake:
 		ofst << "Озеро ";
 		break;
-	case Fish::place::sea:
+	case fish::place::sea:
 		ofst << "Море ";
 		break;
-	case Fish::place::ocean:
+	case fish::place::ocean:
 		ofst << "Океан ";
 		break;
 	default:
 			break;
 	}
-
-	OutCommon(ofst);
+	Out_common(ofst);
 }
-void Fish::Out_only_Fish(ofstream &ofst)
+void fish::Out_only_Fish(ofstream &ofst)
 {
-	if (type != Fish::place::river && type != Fish::place::lake && type != Fish::place::sea && Fish::place::ocean)
+	if (type != fish::place::river && type != fish::place::lake && type != fish::place::sea && fish::place::ocean)
 	{
 		cout << "Произошла ошибка при выводе места проживания рыбы\n";
 		system("pause");

@@ -1,18 +1,18 @@
-#include "Bird.h"
+#include "bird.h"
 #include <iostream>
 #include <fstream>
 using namespace std;
-void Bird::InData(ifstream &ifst) 
+void bird::In_data(ifstream &ifst)
 {
 	ifst >> flying;
 	if (flying != false && flying != true)
 	{
 		cout << "Произошла ошибка при вводе перелетности птицы\n";
 		system("pause");
-		//exit(1);
+		exit(1);
 	}
 }
-void Bird::Out(ofstream &ofst) 
+void bird::Out(ofstream &ofst) 
 {
 	if (flying != false && flying != true)
 	{
@@ -29,5 +29,5 @@ void Bird::Out(ofstream &ofst)
 	{
 		ofst << "Перелетная ";
 	}
-	OutCommon(ofst);
+	Out_common(ofst);
 }
