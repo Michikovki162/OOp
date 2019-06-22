@@ -1,7 +1,4 @@
 Filled container. 
 Только рыба
-0: Это рыба: Место обитания: Река Название: Карп
-Возраст: 48
-1: 
 Empty container. 
  Container contains 0 elements.

@@ -12,7 +12,7 @@ Animal* Animal::In(ifstream &ifst)
 	int key;
 	int length;
 	ifst >> key;
-	if (key == 1) 
+	if (key == 1)
 	{
 		s = new Fish;
 	}
@@ -25,19 +25,51 @@ Animal* Animal::In(ifstream &ifst)
 		s = new Beast;
 	}
 	else
+	{
 		return 0;
+	}
 	s->InData(ifst);
 	ifst >> s->name;
+	if (s->name.length() == 0)
+	{
+		cout << "Произошла ошибка при вводе названия";
+		system("pause");
+		exit(1);
+	}
 	ifst >> s->age;
+	if (s->age < 0)
+	{
+		cout << "Произошла ошибка при вводе возраста";
+		system("pause");
+		exit(1);
+	}
 	return s;
 }
 void Animal::OutCommon(ofstream & ofst)
 {
+	if (name.length() == 0)
+	{
+		cout << "Произошла ошибка при выводе названия";
+		system("pause");
+		exit(1);
+	}
+	if (age < 0)
+	{
+		cout << "Произошла ошибка при вводе возраста";
+		system("pause");
+		exit(1);
+	}
 	ofst << "Название: " << name << endl;
 	ofst << "Возраст: " << age << endl;
 }
 bool Animal::Compare(Animal & other)
 {
+	if ((namelength() < other.namelength()) != true && (namelength() < other.namelength() != false))
+	{
+		cout << "Произошла ошибка при сравнении длины названий";
+		system("pause");
+		exit(1);
+	}
 	return namelength() < other.namelength();
 }
 void Animal::Out_only_Fish(ofstream & ofst)

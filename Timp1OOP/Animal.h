@@ -15,5 +15,6 @@ public:
 	virtual void Out_only_Fish(ofstream &ofst);
 	void OutCommon(ofstream &ofst);
 	bool Compare(Animal &other);
+	int mist;
 };
 #endif
